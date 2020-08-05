@@ -4,7 +4,8 @@ This project contains a Makefile that can be used to run the Docker containers
 and prepare the database for indexing. 
 
 To run the containers (one PostgreSQL instance and the Jupyter Notebook) you can
-use the following command: make up
+use the following command: 
+ - make up
 
 To prepare the database (in case this is a fresh deploy) you can use:
  - make initdb
