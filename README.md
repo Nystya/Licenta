@@ -15,7 +15,7 @@ This will create the DB schema required to index ODC data and add the
 ls_usgs_level1_scene product.
 
 After the containers are running and the DB has been initialized, you can start
-indexing data using make index. Please note that you should change the indexing 
+indexing data using **make index**. Please note that you should change the indexing 
 extents directly in the Makefile.
 
 Once this is all done, you can connect to the Jupyter Notebook from a browser on
