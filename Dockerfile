@@ -5,6 +5,8 @@ ARG py_env_path=/env
 
 RUN mkdir -p /conf
 COPY requirements.txt /conf/
+RUN pip install numpy
+
 RUN env-build-tool new /conf/requirements.txt ${py_env_path} /wheels
 
 FROM opendatacube/geobase:runner-3.0.4
@@ -23,9 +25,15 @@ RUN apt-get update -y \
   && rm -rf /var/lib/apt/lists/*
 
 
+RUN pip install hdmedians==0.13
 RUN export GDAL_DATA=$(gdal-config --datadir)
 ENV LC_ALL=C.UTF-8 \
     PATH="/env/bin:$PATH"
+
+RUN pip install hdmedians
+RUN pip install GDAL==3.0.4
+RUN pip uninstall sat-search -y
+RUN pip install sat-search
 
 RUN useradd -m -s /bin/bash -N jovyan
 USER root
