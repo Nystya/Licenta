@@ -21,3 +21,5 @@ extents directly in the Makefile.
 Once this is all done, you can connect to the Jupyter Notebook from a browser on
 port 81. The deforestation, urbanization and coastal change notebooks can be found
 in the following directory: notebooks/odc_sandbox_notebooks/dcal/ 
+
+The default password to access the Jupyter Notebook is "secretpassword".
