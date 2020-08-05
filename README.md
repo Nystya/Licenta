@@ -14,6 +14,9 @@ To prepare the database (in case this is a fresh deploy) you can use:
 This will create the DB schema required to index ODC data and add the 
 ls_usgs_level1_scene product.
 
+If you want to use an already existing PostgreSQL install, all you have to do is change
+the env variables in the docker-compose file.
+
 After the containers are running and the DB has been initialized, you can start
 indexing data using **make index**. Please note that you should change the indexing 
 extents directly in the Makefile.
@@ -23,3 +26,4 @@ port 81. The deforestation, urbanization and coastal change notebooks can be fou
 in the following directory: notebooks/odc_sandbox_notebooks/dcal/ 
 
 The default password to access the Jupyter Notebook is "secretpassword".
+
